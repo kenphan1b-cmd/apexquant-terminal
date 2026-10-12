@@ -82,7 +82,7 @@ export default function Watchlist({ tickers, selectedSymbol, onSelect, priceFlas
   }, [activeCategory, query]);
 
   return (
-    <aside className="flex h-full flex-col border-r border-white/10 bg-[#0c0e14]">
+    <aside className="flex h-full w-full min-w-0 flex-col overflow-hidden border-r border-white/10 bg-[#0c0e14]">
       <div className="border-b border-white/10 p-3">
         <div className="mb-2 flex items-center justify-between">
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Watchlist</span>

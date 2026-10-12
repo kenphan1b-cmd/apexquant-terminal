@@ -26,7 +26,7 @@ export default function OrderBook({ orderBook, recentTrades, midPrice }: OrderBo
   const changePct = lastTrade ? ((lastTrade.price - midPrice) / midPrice) * 100 : 0;
 
   return (
-    <div className="flex h-full flex-col overflow-hidden border-r border-white/10 bg-[#0c0e14]">
+    <div className="flex h-full w-full min-w-0 flex-col overflow-hidden border-r border-white/10 bg-[#0c0e14]">
       <div className="flex items-center justify-between border-b border-white/10 px-3 py-2">
         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Sổ lệnh</span>
         <span className="text-[9px] text-slate-400 font-mono">Spread {spread.toLocaleString("vi-VN")}</span>

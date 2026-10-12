@@ -436,7 +436,7 @@ export default function TradingChart({ symbol, ticker, candles, flashDirection =
   const positive = ticker.changePct >= 0;
 
   return (
-    <div className={`flex h-full flex-col transition-colors duration-500 ${flashDirection === "up" ? "bg-emerald-500/5" : flashDirection === "down" ? "bg-rose-500/5" : "bg-[#080a0f]"}`}>
+    <div className={`flex h-full w-full min-w-0 max-w-full flex-col transition-colors duration-500 ${flashDirection === "up" ? "bg-emerald-500/5" : flashDirection === "down" ? "bg-rose-500/5" : "bg-[#080a0f]"}`}>
       <FundamentalsBar activeTicker={symbol} />
 
       <div className="flex items-center justify-between gap-2 border-b border-white/10 px-3 py-2">
@@ -481,8 +481,8 @@ export default function TradingChart({ symbol, ticker, candles, flashDirection =
         </div>
       )}
 
-      <div className="relative flex-1">
-        <div ref={containerRef} className="h-full w-full" />
+      <div className="relative flex-1 min-w-0">
+        <div ref={containerRef} className="h-full w-full min-w-0" />
         {crosshair && (
           <div className="pointer-events-none absolute left-3 top-3 rounded-lg border border-white/10 bg-[#0f172a]/90 px-2 py-1.5 text-[10px] text-slate-200 shadow-xl shadow-black/20">
             <div className="font-bold text-cyan-300">{crosshair.time}</div>

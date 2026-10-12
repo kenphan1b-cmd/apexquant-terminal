@@ -32,7 +32,7 @@ export default function OrderEntry({ symbol, ticker, cashBalance, onPlaceOrder }
   };
 
   return (
-    <div className="flex h-full flex-col bg-[#0c0e14] p-3">
+    <div className="flex h-full w-full min-w-0 flex-col bg-[#0c0e14] p-3">
       <div className="mb-3 flex items-center justify-between">
         <div>
           <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500">Lệnh</div>
